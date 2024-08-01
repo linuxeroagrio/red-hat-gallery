@@ -2,4 +2,6 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
 resources:
+- openshift-distributed-tracing-ns.yaml
+- openshift-distributed-tracing-og.yaml
 - jaeger-product-subscription.yaml
