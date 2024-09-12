@@ -211,7 +211,7 @@ Use your browser to navigate to the Grafana URL. You should be able to log into 
 Retrieve the Grafana service account JWT token:
 
 ```
-$ TOKEN=$(oc serviceaccounts get-token grafana-serviceaccount)
+$ TOKEN=$(oc create token grafana-sa)
 ```
 
 Open the Grafana data source definition and insert the service account token that you obtained from the previous command:

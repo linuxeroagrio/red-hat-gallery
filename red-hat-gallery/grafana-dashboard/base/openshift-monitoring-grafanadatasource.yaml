@@ -1,11 +1,13 @@
-apiVersion: integreatly.org/v1alpha1
-kind: GrafanaDataSource
+apiVersion: grafana.integreatly.org/v1beta1
+kind: GrafanaDatasource
 metadata:
   name: openshift-monitoring
 spec:
-  name: openshift-monitoring.yaml
-  datasources:
-  - name: OpenShift Monitoring
+  instanceSelector:
+    matchLabels:
+      dashboards: "grafana"
+  datasource:
+    name: OpenShift Monitoring
     type: prometheus
     access: proxy
     editable: true
