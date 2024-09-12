@@ -284,8 +284,8 @@ The following command will build container images locally and push them to a con
 
 
 ```
-$ TAG=latest \
-  REPO_PREFIX=quay.io/red-hat-gallery \
+$ export TAG=latest \
+  export REPO_PREFIX=quay.io/red-hat-gallery \
   ./hack/make-docker-images.sh
 ```
 
@@ -293,8 +293,8 @@ $ TAG=latest \
 Generate Kubernetes manifests for deploying the application:
 
 ```
-$ TAG=latest \
-  REPO_PREFIX=quay.io/red-hat-gallery \
+$ export TAG=latest \
+  export REPO_PREFIX=quay.io/red-hat-gallery \
   ./hack/make-release-artifacts.sh
 ```
 

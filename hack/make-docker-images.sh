@@ -37,10 +37,10 @@ while IFS= read -d $'\0' -r dir; do
     (
         cd "${builddir}"
         log "Building: ${image}"
-        docker build -t "${image}" .
+        podman build -t "${image}" .
 
         log "Pushing: ${image}"
-        docker push "${image}"
+        podman push "${image}"
     )
 done < <(find "${SCRIPTDIR}/../src" -mindepth 1 -maxdepth 1 -type d -print0)
 
