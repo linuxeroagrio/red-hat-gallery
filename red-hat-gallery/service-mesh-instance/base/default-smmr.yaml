@@ -3,4 +3,5 @@ kind: ServiceMeshMemberRoll
 metadata:
   name: default
 spec:
-  members: []
+  members:
+  - gallery
